@@ -1,0 +1,32 @@
+{
+  "name": "unit-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boscocg/tests.git"
+  },
+  "keywords": [
+    "Unit",
+    "tests",
+    "tdd",
+    "js"
+  ],
+  "author": "Joao Bosco",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/boscocg/tests/issues"
+  },
+  "homepage": "https://github.com/boscocg/tests#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.3",
+    "babel-preset-es2015-native-modules": "^6.9.4",
+    "webpack": "^4.1.0"
+  },
+  "dependencies": {},
+  "description": "Nossa biblioteca contendo testes unitários."
+}
