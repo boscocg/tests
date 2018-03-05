@@ -1,6 +1,8 @@
 const webpack = require('webpack'); // eslint-disable-line
+const nodeENV = process.env.NODE_ENV || 'production'; // eslint-disable-line
 
 module.exports = {
+  devtool: 'source-map',
   entry: './src/app.js',
   output: {
     path: __dirname + '/dist', // eslint-disable-line
@@ -20,4 +22,14 @@ module.exports = {
       },
     }],
   },
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin({
+      compress: { warnings: false },
+      output: { comments: false },
+      sourceMap: true,
+    }),
+    new webpack.DefinePlugin({
+      'process.env': { NODE_ENV: JSON.stringify(nodeENV) },
+    }),
+  ],
 };

@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "build": "./node_modules/.bin/webpack-dev-server --colors --progress",
-    "watch": "npm run build -- --inline --hot",
+    "dev": "NODE_ENV='development' npm run build -- --inline --hot --open",
     "lint": "./node_modules/.bin/eslint src/*.js",
     "prepush": "npm run lint"
   },
@@ -38,7 +38,9 @@
     "webpack-dev-server": "^1.16.5"
   },
   "dependencies": {
-    "ramda": "^0.25.0"
+    "ramda": "^0.25.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
   },
   "description": "Nossa biblioteca contendo testes unitários."
 }
