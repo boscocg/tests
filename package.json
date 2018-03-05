@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "build": "./node_modules/.bin/webpack-dev-server --colors --progress",
+    "watch": "npm run build -- --inline --hot",
     "lint": "./node_modules/.bin/eslint src/*.js",
-    "prepush": "npm run lint",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepush": "npm run lint"
   },
   "repository": {
     "type": "git",
@@ -24,17 +25,20 @@
   },
   "homepage": "https://github.com/boscocg/tests#readme",
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.3",
-    "babel-preset-es2015-native-modules": "^6.9.4",
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.22.0",
     "eslint": "^4.18.2",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
     "husky": "^0.14.3",
-    "webpack": "^4.1.0"
+    "webpack": "^1.15.0",
+    "webpack-dev-server": "^1.16.5"
   },
-  "dependencies": {},
+  "dependencies": {
+    "ramda": "^0.25.0"
+  },
   "description": "Nossa biblioteca contendo testes unitários."
 }
